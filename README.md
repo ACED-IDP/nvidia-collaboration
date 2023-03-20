@@ -23,6 +23,26 @@ See `data/raw/README.md`, download directory-listing.txt
 nvidia_collab_etl directory
 ```
 
+### expected results
+
+```
+data
+├── fhir
+│   ├── DocumentReference.ndjson
+│   ├── Observation.ndjson
+│   ├── Patient.ndjson
+│   ├── README.md
+│   ├── ResearchStudy.ndjson
+│   ├── ResearchSubject.ndjson
+│   ├── Specimen.ndjson
+│   └── Task.ndjson
+└── raw
+    ├── README.md
+    └── directory-listing.txt
+
+
+```
+
 ## Run the tests
 
 ```
