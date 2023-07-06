@@ -131,3 +131,6 @@ dmypy.json
 # project data
 .idea
 Secrets/.env
+tmp/
+.DS_Store
+
