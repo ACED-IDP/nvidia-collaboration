@@ -14,20 +14,19 @@ class NVIDIAPathParser(PathParser):
     Expected path format: 'RoundNumber5_MarkerName.MarkerName.MarkerName.MarkerName_TissueID_DateOfImaging__RandomFileSpecificNumber_ChannelID'
     """
     def extract_patient_identifier(self, path: str) -> Identifier:
-        _ = _parse_path(path)
+        _ = parse_path(path)
         if _ and _['patient']:
             return Identifier.parse_obj({'system': 'http://ohsu.edu/nvidia-collaboration/patient', 'value': _['patient']})
         return None
 
     def extract_specimen_identifier(self, path: str) -> Identifier:
-        _ = _parse_path(path)
+        _ = parse_path(path)
         if _ and _['tissue']:
             return Identifier.parse_obj({'system': 'http://ohsu.edu/nvidia-collaboration/specimen', 'value': _['tissue']})
         return None
 
-def _parse_path(line: str) -> dict:
+def parse_path(line: str) -> dict:
     """Parse directory listing."""
-    # 'RoundNumber5_MarkerName.MarkerName.MarkerName.MarkerName_TissueID_DateOfImaging__RandomFileSpecificNumber_ChannelID'
 
     if line == '':
         return None
