@@ -1,0 +1,5 @@
+click
+orjson
+snakemake
+# fhir.resources
+https://github.com/bmeg/fhir.resources/archive/feature/backref.zip
