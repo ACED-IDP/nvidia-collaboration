@@ -1,1 +1,1 @@
-gen3_util==0.0.2-rc7
+gen3_util==0.0.2-rc8
