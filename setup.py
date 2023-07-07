@@ -40,11 +40,11 @@ setup(
     # There are some restrictions on what makes a valid project name
     # specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
-    name='nvidia_collab',  # Required
+    name='gen3_util_plugin_nvidia',  # Required
 
     # Versions should comply with PEP 440:
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='0.0.1',  # Required
+    version='0.0.2rc1',  # Required
 
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
@@ -78,7 +78,7 @@ setup(
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
 
-        'License :: OSI Approved :: APACHE License',
+        'License :: OSI Approved :: MIT License',
 
         # Specify the Python versions you support here.
         'Programming Language :: Python :: 3.9',
@@ -124,7 +124,6 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'nvidia_collab_etl = nvidia_collab.transform:transform'
         ],
     },
 
