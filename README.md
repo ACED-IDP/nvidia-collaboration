@@ -12,11 +12,6 @@ python3 -m pip install -r requirements-dev.txt
 python3 -m pip install -e .
 ```
 
-### Retrieve directory listing
-
-See `data/raw/README.md`, download directory-listing.txt
-
-
 ## Run the import with `--plugin_path` 
 
 ```
