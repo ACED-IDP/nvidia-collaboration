@@ -15,7 +15,7 @@ python3 -m pip install -e .
 ## Run the import with `--plugin_path` 
 
 ```
-gen3_util meta  import dir INPUT_PATH OUTPUT_PATH --project_id aced-nvidia --plugin_path {plugin_path}
+gen3_util meta  import dir INPUT_PATH OUTPUT_PATH --project_id aced-nvidia --plugin_path gen3_util_plugin_nvidia
 ```
 
 ### expected results
