@@ -17,10 +17,10 @@ python3 -m pip install -e .
 See `data/raw/README.md`, download directory-listing.txt
 
 
-## Run the transform
+## Run the import with `--plugin_path` 
 
 ```
-nvidia_collab_etl directory
+gen3_util meta  import dir INPUT_PATH OUTPUT_PATH --project_id aced-nvidia --plugin_path {plugin_path}
 ```
 
 ### expected results
@@ -29,16 +29,11 @@ nvidia_collab_etl directory
 data
 ├── fhir
 │   ├── DocumentReference.ndjson
-│   ├── Observation.ndjson
 │   ├── Patient.ndjson
-│   ├── README.md
 │   ├── ResearchStudy.ndjson
 │   ├── ResearchSubject.ndjson
 │   ├── Specimen.ndjson
 │   └── Task.ndjson
-└── raw
-    ├── README.md
-    └── directory-listing.txt
 
 
 ```
