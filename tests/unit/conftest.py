@@ -15,745 +15,747 @@ EXPECTED_PATIENTS = ['24952-6', '38592-6', '57658-6', '48411-6', '31022-6', '335
                      '54774-4', '57494-6', '17633-6']
 
 EXPECTED_PATHS = """
-    HandE/2020_08_13__8667_31480.tif
-    HandE/2020_08_13__8670_48411.tif
-    HandE/2020_08_13__8669_38592.tif
-    HandE/2020_08_13__8662_24952.tif
-    HandE/2020_08_13__8664_30411.tif
-    HandE/2020_08_13__8661_19142.tif
-    HandE/2020_08_13__8675_57658.tif
-    HandE/2020_08_13__8665_31022.tif
-    HandE/2020_08_13__8659_17633.tif
-    HandE/2020_08_13__8673_57494.tif
-    HandE/2020_08_13__8668_33548.tif
-    HandE/2020_08_13__8660_18538.tif
-    HandE/2020_08_13__8671_54774.tif
-    class_labels.csv
-    annotations/2020_08_13__8675_57658.json
-    annotations/2020_08_13__8669_38592.json
-    annotations/2020_08_13__8661_19142.json
-    annotations/2020_08_13__8670_48411.json
-    annotations/2020_08_13__8667_31480.json
-    annotations/2020_08_13__8664_30411.json
-    annotations/2020_08_13__8660_18538.json
-    annotations/2020_08_13__8665_31022.json
-    annotations/2020_08_13__8673_57494.json
-    RegisteredImages/31480-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31480-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31480-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31480-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31480-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31480-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31480-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31480-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31480-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31480-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31480-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31480-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31480-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31480-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31480-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31480-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31480-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31480-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31480-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31480-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31480-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31480-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31480-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31480-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31480-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31480-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31480-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31480-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31480-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31480-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31480-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31480-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R5_R5c2.CD8.R5c4.R5c5_31480-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31480-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31480-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31480-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31480-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31480-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31480-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31480-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31480-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31480-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31480-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31480-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31480-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31480-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31480-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31480-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31480-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31480-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31480-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31480-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31480-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31480-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31480-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31480-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31480-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_48411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_48411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_48411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_48411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_48411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_48411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_48411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_48411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_48411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_48411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_48411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_48411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_48411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_48411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_48411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_48411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_48411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_48411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_48411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_48411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_48411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_48411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_48411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_48411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_48411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_48411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_48411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_48411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_48411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_48411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_48411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_48411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_48411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_48411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_48411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_48411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_48411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_48411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_48411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_48411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_48411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_48411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_48411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_48411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_48411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_48411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_48411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_48411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_48411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_48411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_48411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_48411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_48411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_48411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/48411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_48411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_30411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_30411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_30411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_30411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_30411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_30411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_30411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_30411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_30411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_30411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_30411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_30411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_30411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_30411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_30411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_30411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_30411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_30411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_30411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_30411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_30411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_30411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_30411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_30411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_30411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_30411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_30411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_30411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_30411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_30411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_30411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_30411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_30411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_30411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_30411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_30411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_30411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_30411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_30411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_30411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_30411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_30411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_30411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_30411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_30411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_30411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_30411-6-Scene-001_c2_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_30411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_30411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_30411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_30411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_30411-6-Scene-001_c5_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_30411-6-Scene-001_c4_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_30411-6-Scene-001_c1_ORG.tif
-    RegisteredImages/30411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_30411-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_19142-6-Scene-001_c1_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_19142-6-Scene-001_c1_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_19142-6-Scene-001_c2_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_19142-6-Scene-001_c2_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_19142-6-Scene-001_c1_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_19142-6-Scene-001_c1_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_19142-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_19142-6-Scene-001_c4_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_19142-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_19142-6-Scene-001_c5_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_19142-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_19142-6-Scene-001_c4_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_19142-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_19142-6-Scene-001_c4_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_19142-6-Scene-001_c5_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_19142-6-Scene-001_c5_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_19142-6-Scene-001_c5_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_19142-6-Scene-001_c1_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_19142-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_19142-6-Scene-001_c2_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_19142-6-Scene-001_c4_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_19142-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_19142-6-Scene-001_c4_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_19142-6-Scene-001_c4_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_19142-6-Scene-001_c1_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_19142-6-Scene-001_c2_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_19142-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_19142-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_19142-6-Scene-001_c4_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_19142-6-Scene-001_c1_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_19142-6-Scene-001_c1_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_19142-6-Scene-001_c2_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_19142-6-Scene-001_c5_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_19142-6-Scene-001_c5_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_19142-6-Scene-001_c2_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_19142-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_19142-6-Scene-001_c2_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_19142-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_19142-6-Scene-001_c4_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_19142-6-Scene-001_c1_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_19142-6-Scene-001_c2_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_19142-6-Scene-001_c3_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_19142-6-Scene-001_c5_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_19142-6-Scene-001_c2_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_19142-6-Scene-001_c5_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_19142-6-Scene-001_c4_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_19142-6-Scene-001_c1_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_19142-6-Scene-001_c2_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_19142-6-Scene-001_c1_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_19142-6-Scene-001_c5_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_19142-6-Scene-001_c4_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_19142-6-Scene-001_c2_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_19142-6-Scene-001_c5_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_19142-6-Scene-001_c4_ORG.tif
-    RegisteredImages/19142-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_19142-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57494-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57494-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57494-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57494-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57494-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57494-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57494-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57494-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57494-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57494-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57494-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57494-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57494-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57494-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57494-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57494-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57494-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57494-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57494-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57494-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57494-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57494-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57494-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57494-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57494-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57494-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57494-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57494-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57494-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57494-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57494-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57494-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57494-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57494-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57494-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57494-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57494-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57494-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57494-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57494-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57494-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57494-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57494-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57494-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57494-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57494-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57494-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57494-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57494-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57494-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57494-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57494-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57494-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57494-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57494-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57494-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31022-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31022-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31022-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31022-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31022-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31022-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31022-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31022-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31022-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31022-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31022-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31022-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31022-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31022-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31022-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31022-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31022-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31022-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31022-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31022-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31022-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31022-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31022-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31022-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31022-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31022-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31022-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31022-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31022-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31022-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31022-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31022-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31022-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31022-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31022-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31022-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31022-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31022-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31022-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31022-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31022-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31022-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31022-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31022-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31022-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31022-6-Scene-001_c5_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31022-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31022-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31022-6-Scene-001_c1_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31022-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31022-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31022-6-Scene-001_c4_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31022-6-Scene-001_c3_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31022-6-Scene-001_c2_ORG.tif
-    RegisteredImages/31022-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31022-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_33548-6-Scene-001_c4_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_33548-6-Scene-001_c5_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_33548-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_33548-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_33548-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_33548-6-Scene-001_c4_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_33548-6-Scene-001_c5_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_33548-6-Scene-001_c1_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_33548-6-Scene-001_c2_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_33548-6-Scene-001_c4_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_33548-6-Scene-001_c4_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_33548-6-Scene-001_c4_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_33548-6-Scene-001_c1_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_33548-6-Scene-001_c2_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_33548-6-Scene-001_c1_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_33548-6-Scene-001_c4_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_33548-6-Scene-001_c1_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_33548-6-Scene-001_c4_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_33548-6-Scene-001_c5_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_33548-6-Scene-001_c2_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_33548-6-Scene-001_c1_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_33548-6-Scene-001_c5_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_33548-6-Scene-001_c2_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_33548-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_33548-6-Scene-001_c2_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_33548-6-Scene-001_c5_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_33548-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_33548-6-Scene-001_c4_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_33548-6-Scene-001_c2_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_33548-6-Scene-001_c1_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_33548-6-Scene-001_c5_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_33548-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_33548-6-Scene-001_c1_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_33548-6-Scene-001_c1_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_33548-6-Scene-001_c2_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_33548-6-Scene-001_c2_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_33548-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_33548-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_33548-6-Scene-001_c1_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_33548-6-Scene-001_c4_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_33548-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_33548-6-Scene-001_c5_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_33548-6-Scene-001_c4_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_33548-6-Scene-001_c5_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_33548-6-Scene-001_c2_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_33548-6-Scene-001_c2_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_33548-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_33548-6-Scene-001_c4_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_33548-6-Scene-001_c1_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_33548-6-Scene-001_c3_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_33548-6-Scene-001_c1_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_33548-6-Scene-001_c5_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_33548-6-Scene-001_c5_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_33548-6-Scene-001_c2_ORG.tif
-    RegisteredImages/33548-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_33548-6-Scene-001_c5_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_54774-4-Scene-001_c5_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_54774-4-Scene-001_c4_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_54774-4-Scene-001_c5_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_54774-4-Scene-001_c4_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_54774-4-Scene-001_c5_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_54774-4-Scene-001_c2_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_54774-4-Scene-001_c2_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_54774-4-Scene-001_c3_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_54774-4-Scene-001_c4_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_54774-4-Scene-001_c5_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_54774-4-Scene-001_c3_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_54774-4-Scene-001_c4_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_54774-4-Scene-001_c1_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_54774-4-Scene-001_c2_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_54774-4-Scene-001_c2_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_54774-4-Scene-001_c1_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_54774-4-Scene-001_c1_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_54774-4-Scene-001_c3_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_54774-4-Scene-001_c3_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_54774-4-Scene-001_c1_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_54774-4-Scene-001_c3_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_54774-4-Scene-001_c4_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_54774-4-Scene-001_c1_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_54774-4-Scene-001_c5_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_54774-4-Scene-001_c5_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_54774-4-Scene-001_c3_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_54774-4-Scene-001_c1_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_54774-4-Scene-001_c3_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_54774-4-Scene-001_c2_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_54774-4-Scene-001_c4_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_54774-4-Scene-001_c1_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_54774-4-Scene-001_c4_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_54774-4-Scene-001_c5_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_54774-4-Scene-001_c1_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_54774-4-Scene-001_c4_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_54774-4-Scene-001_c2_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_54774-4-Scene-001_c4_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_54774-4-Scene-001_c2_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_54774-4-Scene-001_c5_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_54774-4-Scene-001_c3_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_54774-4-Scene-001_c1_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_54774-4-Scene-001_c4_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_54774-4-Scene-001_c2_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_54774-4-Scene-001_c3_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_54774-4-Scene-001_c4_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_54774-4-Scene-001_c3_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_54774-4-Scene-001_c2_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_54774-4-Scene-001_c2_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_54774-4-Scene-001_c5_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_54774-4-Scene-001_c2_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_54774-4-Scene-001_c3_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_54774-4-Scene-001_c1_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_54774-4-Scene-001_c5_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_54774-4-Scene-001_c1_ORG.tif
-    RegisteredImages/54774-4-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_54774-4-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_18538-6-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_18538-6-Scene-001_c2_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_18538-6-Scene-001_c2_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_18538-6-Scene-001_c1_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_18538-6-Scene-001_c2_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_18538-6-Scene-001_c4_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_18538-6-Scene-001_c1_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_18538-6-Scene-001_c4_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_18538-6-Scene-001_c1_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_18538-6-Scene-001_c2_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_18538-6-Scene-001_c3_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_18538-6-Scene-001_c3_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_18538-6-Scene-001_c2_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_18538-6-Scene-001_c4_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_18538-6-Scene-001_c3_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_18538-6-Scene-001_c1_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_18538-6-Scene-001_c1_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_18538-6-Scene-001_c1_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_18538-6-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_18538-6-Scene-001_c3_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_18538-6-Scene-001_c2_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_18538-6-Scene-001_c1_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_18538-6-Scene-001_c2_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_18538-6-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_18538-6-Scene-001_c2_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_18538-6-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_18538-6-Scene-001_c1_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_18538-6-Scene-001_c3_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_18538-6-Scene-001_c1_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_18538-6-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_18538-6-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_18538-6-Scene-001_c1_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_18538-6-Scene-001_c3_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_18538-6-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_18538-6-Scene-001_c1_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_18538-6-Scene-001_c2_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_18538-6-Scene-001_c2_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_18538-6-Scene-001_c4_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_18538-6-Scene-001_c3_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_18538-6-Scene-001_c4_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_18538-6-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_18538-6-Scene-001_c4_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_18538-6-Scene-001_c4_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_18538-6-Scene-001_c4_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_18538-6-Scene-001_c4_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_18538-6-Scene-001_c4_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_18538-6-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_18538-6-Scene-001_c3_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_18538-6-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_18538-6-Scene-001_c3_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_18538-6-Scene-001_c3_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_18538-6-Scene-001_c2_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_18538-6-Scene-001_c4_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_18538-6-Scene-001_c5_ORG.tif
-    RegisteredImages/18538-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_18538-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_24952-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_24952-6-Scene-001_c4_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_24952-6-Scene-001_c5_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_24952-6-Scene-001_c5_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_24952-6-Scene-001_c5_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_24952-6-Scene-001_c4_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_24952-6-Scene-001_c5_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_24952-6-Scene-001_c2_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_24952-6-Scene-001_c5_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_24952-6-Scene-001_c2_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_24952-6-Scene-001_c4_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_24952-6-Scene-001_c2_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_24952-6-Scene-001_c2_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_24952-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_24952-6-Scene-001_c1_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_24952-6-Scene-001_c5_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_24952-6-Scene-001_c2_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_24952-6-Scene-001_c2_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_24952-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_24952-6-Scene-001_c1_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_24952-6-Scene-001_c1_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_24952-6-Scene-001_c1_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_24952-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_24952-6-Scene-001_c4_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_24952-6-Scene-001_c1_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_24952-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_24952-6-Scene-001_c4_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_24952-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_24952-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_24952-6-Scene-001_c1_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_24952-6-Scene-001_c5_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_24952-6-Scene-001_c5_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_24952-6-Scene-001_c1_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_24952-6-Scene-001_c2_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_24952-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_24952-6-Scene-001_c4_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_24952-6-Scene-001_c1_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_24952-6-Scene-001_c4_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_24952-6-Scene-001_c2_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_24952-6-Scene-001_c4_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_24952-6-Scene-001_c2_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_24952-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_24952-6-Scene-001_c4_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_24952-6-Scene-001_c1_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_24952-6-Scene-001_c4_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_24952-6-Scene-001_c2_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_24952-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_24952-6-Scene-001_c5_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_24952-6-Scene-001_c5_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_24952-6-Scene-001_c1_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_24952-6-Scene-001_c5_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_24952-6-Scene-001_c2_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_24952-6-Scene-001_c3_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_24952-6-Scene-001_c1_ORG.tif
-    RegisteredImages/24952-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_24952-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_38592-6-Scene-001_c5_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_38592-6-Scene-001_c5_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_38592-6-Scene-001_c2_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_38592-6-Scene-001_c3_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_38592-6-Scene-001_c1_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_38592-6-Scene-001_c3_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_38592-6-Scene-001_c2_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_38592-6-Scene-001_c3_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_38592-6-Scene-001_c2_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_38592-6-Scene-001_c5_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_38592-6-Scene-001_c5_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_38592-6-Scene-001_c2_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_38592-6-Scene-001_c2_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_38592-6-Scene-001_c5_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_38592-6-Scene-001_c1_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_38592-6-Scene-001_c2_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_38592-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_38592-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_38592-6-Scene-001_c5_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_38592-6-Scene-001_c3_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_38592-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_38592-6-Scene-001_c5_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_38592-6-Scene-001_c1_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_38592-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_38592-6-Scene-001_c1_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_38592-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_38592-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_38592-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_38592-6-Scene-001_c1_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_38592-6-Scene-001_c3_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_38592-6-Scene-001_c3_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_38592-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_38592-6-Scene-001_c2_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_38592-6-Scene-001_c5_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_38592-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_38592-6-Scene-001_c3_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_38592-6-Scene-001_c1_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_38592-6-Scene-001_c1_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_38592-6-Scene-001_c2_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_38592-6-Scene-001_c5_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_38592-6-Scene-001_c2_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_38592-6-Scene-001_c1_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_38592-6-Scene-001_c2_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_38592-6-Scene-001_c3_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_38592-6-Scene-001_c1_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_38592-6-Scene-001_c3_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_38592-6-Scene-001_c5_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_38592-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_38592-6-Scene-001_c4_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_38592-6-Scene-001_c3_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_38592-6-Scene-001_c3_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_38592-6-Scene-001_c1_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_38592-6-Scene-001_c1_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_38592-6-Scene-001_c5_ORG.tif
-    RegisteredImages/38592-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_38592-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_17633-6-Scene-001_c4_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_17633-6-Scene-001_c3_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_17633-6-Scene-001_c1_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_17633-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_17633-6-Scene-001_c4_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_17633-6-Scene-001_c1_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_17633-6-Scene-001_c3_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_17633-6-Scene-001_c3_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_17633-6-Scene-001_c3_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_17633-6-Scene-001_c5_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_17633-6-Scene-001_c1_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_17633-6-Scene-001_c5_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_17633-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_17633-6-Scene-001_c4_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_17633-6-Scene-001_c1_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_17633-6-Scene-001_c1_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_17633-6-Scene-001_c5_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_17633-6-Scene-001_c5_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_17633-6-Scene-001_c5_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_17633-6-Scene-001_c4_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_17633-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_17633-6-Scene-001_c3_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_17633-6-Scene-001_c1_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_17633-6-Scene-001_c1_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_17633-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_17633-6-Scene-001_c5_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_17633-6-Scene-001_c5_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_17633-6-Scene-001_c1_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_17633-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_17633-6-Scene-001_c4_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_17633-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_17633-6-Scene-001_c5_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_17633-6-Scene-001_c3_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_17633-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_17633-6-Scene-001_c4_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_17633-6-Scene-001_c3_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_17633-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_17633-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_17633-6-Scene-001_c3_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_17633-6-Scene-001_c4_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_17633-6-Scene-001_c5_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_17633-6-Scene-001_c4_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_17633-6-Scene-001_c3_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_17633-6-Scene-001_c4_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_17633-6-Scene-001_c5_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_17633-6-Scene-001_c1_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_17633-6-Scene-001_c1_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_17633-6-Scene-001_c3_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_17633-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_17633-6-Scene-001_c1_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_17633-6-Scene-001_c4_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_17633-6-Scene-001_c5_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_17633-6-Scene-001_c4_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_17633-6-Scene-001_c2_ORG.tif
-    RegisteredImages/17633-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_17633-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57658-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57658-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57658-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57658-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57658-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57658-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57658-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57658-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57658-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57658-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57658-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57658-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57658-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57658-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57658-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57658-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57658-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57658-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57658-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57658-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57658-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57658-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57658-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57658-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57658-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57658-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57658-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57658-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57658-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57658-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57658-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57658-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57658-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57658-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57658-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57658-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57658-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57658-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57658-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57658-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57658-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57658-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57658-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57658-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57658-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57658-6-Scene-001_c1_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57658-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57658-6-Scene-001_c5_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57658-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57658-6-Scene-001_c2_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57658-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57658-6-Scene-001_c4_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57658-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57658-6-Scene-001_c3_ORG.tif
-    RegisteredImages/57658-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_33548-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_33548-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_33548-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_33548-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_33548-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_33548-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_33548-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_33548-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_33548-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_33548-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_33548-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_33548-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_33548-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_33548-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_33548-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_33548-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_33548-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_33548-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_33548-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_33548-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_33548-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_33548-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_33548-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_33548-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_33548-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_33548-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_33548-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_33548-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_33548-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_33548-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_33548-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_33548-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_33548-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_33548-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_33548-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_33548-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_33548-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_33548-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_33548-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_33548-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_33548-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_33548-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_33548-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_33548-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_33548-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_33548-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_33548-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_33548-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_33548-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_33548-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_33548-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_33548-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_33548-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_33548-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/33548-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_33548-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57658-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57658-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57658-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57658-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57658-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57658-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57658-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57658-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57658-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57658-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57658-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57658-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57658-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57658-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57658-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57658-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57658-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57658-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57658-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57658-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57658-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57658-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57658-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57658-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57658-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57658-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57658-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57658-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57658-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57658-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57658-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57658-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57658-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57658-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57658-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57658-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57658-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57658-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57658-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57658-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57658-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57658-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57658-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57658-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57658-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57658-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/.DS_Store
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_38592-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_38592-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_38592-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_38592-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_38592-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_38592-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_38592-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_38592-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_38592-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_38592-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_38592-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_38592-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_38592-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_38592-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_38592-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_38592-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_38592-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_38592-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_38592-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_38592-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_38592-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_38592-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_38592-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_38592-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_38592-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_38592-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_38592-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_38592-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_38592-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_38592-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_38592-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_38592-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_38592-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_38592-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_38592-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_38592-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_38592-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_38592-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_38592-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_38592-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_38592-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_38592-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_38592-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_38592-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_38592-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_38592-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_38592-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_38592-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_38592-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_38592-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_38592-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_38592-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_38592-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_38592-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/38592-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_38592-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_30411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_30411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_30411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_30411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_30411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_30411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_30411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_30411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_30411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_30411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_30411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_30411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_30411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_30411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_30411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_30411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_30411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_30411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_30411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_30411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_30411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_30411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_30411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_30411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_30411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_30411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_30411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_30411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_30411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_30411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_30411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_30411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_30411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_30411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_30411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_30411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_30411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_30411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_30411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_30411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_30411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_30411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_30411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_30411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_30411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_30411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_30411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_30411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_30411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_30411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_30411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_30411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_30411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_30411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/30411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_30411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31480-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31480-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31480-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31480-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31480-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31480-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31480-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31480-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31480-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31480-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31480-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31480-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31480-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R5_R5c2.CD8.R5c4.R5c5_31480-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31480-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31480-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31480-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31480-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31480-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31480-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31480-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31480-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31480-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31480-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31480-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31480-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31480-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31480-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31480-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31480-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31480-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31480-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31480-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31480-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31480-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31480-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31480-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31480-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31480-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31480-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31480-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31480-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31480-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31480-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31480-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31480-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31480-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31480-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31480-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31480-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31480-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31480-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31480-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31480-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31480-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31480-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_48411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_48411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_48411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_48411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_48411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_48411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_48411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_48411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_48411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_48411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_48411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_48411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_48411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_48411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_48411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_48411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_48411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_48411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_48411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_48411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_48411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_48411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_48411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_48411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_48411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_48411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_48411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_48411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_48411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_48411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_48411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_48411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_48411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_48411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_48411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_48411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_48411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_48411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_48411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_48411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_48411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_48411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_48411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_48411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_48411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_48411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_48411-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_48411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_48411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_48411-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_48411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_48411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_48411-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_48411-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/48411-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_48411-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_17633-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_17633-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_17633-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_17633-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_17633-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_17633-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_17633-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_17633-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_17633-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_17633-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_17633-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_17633-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_17633-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_17633-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_17633-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_17633-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_17633-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_17633-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_17633-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_17633-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_17633-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_17633-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_17633-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_17633-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_17633-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_17633-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_17633-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_17633-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_17633-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_17633-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_17633-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_17633-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_17633-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_17633-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_17633-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_17633-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_17633-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_17633-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_17633-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_17633-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_17633-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_17633-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_17633-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_17633-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_17633-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_17633-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_17633-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_17633-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_17633-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_17633-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_17633-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_17633-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_17633-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_17633-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/17633-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_17633-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_18538-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_18538-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_18538-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_18538-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_18538-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_18538-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_18538-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_18538-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_18538-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_18538-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_18538-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_18538-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_18538-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_18538-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_18538-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_18538-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_18538-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_18538-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_18538-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_18538-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_18538-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_18538-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_18538-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_18538-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_18538-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_18538-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_18538-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_18538-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_18538-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_18538-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_18538-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_18538-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_18538-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_18538-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_18538-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_18538-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_18538-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_18538-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_18538-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_18538-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_18538-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_18538-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_18538-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_18538-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_18538-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_18538-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_18538-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_18538-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_18538-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_18538-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_18538-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_18538-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_18538-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_18538-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/18538-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_18538-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_24952-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_24952-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_24952-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_24952-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_24952-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_24952-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_24952-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_24952-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_24952-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_24952-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_24952-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_24952-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_24952-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_24952-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_24952-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_24952-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_24952-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_24952-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_24952-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_24952-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_24952-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_24952-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_24952-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_24952-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_24952-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_24952-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_24952-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_24952-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_24952-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_24952-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_24952-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_24952-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_24952-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_24952-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_24952-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_24952-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_24952-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_24952-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_24952-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_24952-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_24952-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_24952-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_24952-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_24952-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_24952-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_24952-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_24952-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_24952-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_24952-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_24952-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_24952-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_24952-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_24952-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_24952-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/24952-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_24952-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57494-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57494-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57494-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57494-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57494-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57494-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57494-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57494-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57494-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57494-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57494-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57494-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57494-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57494-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57494-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57494-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57494-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57494-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57494-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57494-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57494-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57494-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57494-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57494-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57494-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57494-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57494-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57494-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57494-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57494-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57494-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57494-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57494-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57494-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57494-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_57494-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57494-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57494-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57494-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57494-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57494-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57494-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_57494-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57494-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_57494-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57494-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_57494-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57494-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_57494-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_57494-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_57494-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_57494-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_57494-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_57494-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/57494-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_57494-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_19142-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_19142-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_19142-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_19142-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_19142-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_19142-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_19142-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_19142-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_19142-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_19142-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_19142-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_19142-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_19142-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_19142-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_19142-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_19142-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_19142-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_19142-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_19142-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_19142-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_19142-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_19142-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_19142-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_19142-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_19142-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_19142-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_19142-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_19142-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_19142-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_19142-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_19142-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_19142-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_19142-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_19142-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_19142-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_19142-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_19142-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_19142-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_19142-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_19142-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_19142-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_19142-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_19142-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_19142-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_19142-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_19142-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_19142-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_19142-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_19142-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_19142-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_19142-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_19142-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_19142-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_19142-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/19142-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_19142-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31022-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31022-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31022-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31022-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31022-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31022-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31022-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31022-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31022-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31022-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31022-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31022-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31022-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31022-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31022-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31022-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31022-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31022-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31022-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31022-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31022-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31022-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31022-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31022-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31022-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31022-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31022-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31022-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31022-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31022-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31022-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31022-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31022-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31022-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31022-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31022-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31022-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_31022-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_31022-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_31022-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31022-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31022-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31022-6-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_31022-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31022-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31022-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31022-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_31022-6-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31022-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_31022-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_31022-6-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_31022-6-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_31022-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_31022-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/31022-6-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_31022-6-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_54774-4-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_54774-4-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_54774-4-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_54774-4-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_54774-4-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_54774-4-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_54774-4-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_54774-4-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_54774-4-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_54774-4-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_54774-4-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_54774-4-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_54774-4-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_54774-4-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_54774-4-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_54774-4-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_54774-4-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_54774-4-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_54774-4-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_54774-4-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_54774-4-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_54774-4-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_54774-4-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_54774-4-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_54774-4-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_54774-4-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_54774-4-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_54774-4-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_54774-4-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_54774-4-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_54774-4-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_54774-4-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_54774-4-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R2_EPCAM.AR.CD20.ChromA_54774-4-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_54774-4-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_54774-4-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_54774-4-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_54774-4-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_54774-4-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_54774-4-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_54774-4-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R1_aSMA.Tryp.Ki67.CD68_54774-4-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_54774-4-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R4_R4c2.CD11b.CD4.CD45_54774-4-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R10_H3K4me27.B7H6.FOXA1.PTEN_54774-4-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_54774-4-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_54774-4-Scene-001_c2_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_54774-4-Scene-001_c5_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R6_p53.ERG.PD1.GZMB_54774-4-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R3_CK5.CD27.HLADRB1.CD3_54774-4-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R8_Vim.NKX31.CK8.AMACR_54774-4-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R3Q_Q3c2.Q3c3.Q3c4.Q3c5_54774-4-Scene-001_c1_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R7_FYN.Ecad.NCAM.EOMES_54774-4-Scene-001_c4_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R9_H3K27ac.CD44.CD90.FOXP3_54774-4-Scene-001_c3_ORG.tif
+2020_Immune/RegisteredImages/54774-4-Scene-001/Registered-R5_CDX2.CD8.CD163.CD66b_54774-4-Scene-001_c2_ORG.tif
+HandE_annotations/HandE/2020_08_13__8662_24952.tif
+HandE_annotations/HandE/2020_08_13__8673_57494.tif
+HandE_annotations/HandE/2020_08_13__8665_31022.tif
+HandE_annotations/HandE/2020_08_13__8664_30411.tif
+HandE_annotations/HandE/2020_08_13__8660_18538.tif
+HandE_annotations/HandE/2020_08_13__8670_48411.tif
+HandE_annotations/HandE/2020_08_13__8667_31480.tif
+HandE_annotations/HandE/2020_08_13__8668_33548.tif
+HandE_annotations/HandE/2020_08_13__8675_57658.tif
+HandE_annotations/HandE/2020_08_13__8669_38592.tif
+HandE_annotations/HandE/2020_08_13__8661_19142.tif
+HandE_annotations/HandE/2020_08_13__8671_54774.tif
+HandE_annotations/HandE/2020_08_13__8659_17633.tif
+HandE_annotations/annotations/2020_08_13__8660_18538.json
+HandE_annotations/annotations/2020_08_13__8664_30411.json
+HandE_annotations/annotations/2020_08_13__8667_31480.json
+HandE_annotations/annotations/2020_08_13__8670_48411.json
+HandE_annotations/annotations/2020_08_13__8673_57494.json
+HandE_annotations/annotations/2020_08_13__8675_57658.json
+HandE_annotations/annotations/2020_08_13__8665_31022.json
+HandE_annotations/annotations/2020_08_13__8669_38592.json
+HandE_annotations/annotations/2020_08_13__8661_19142.json
+HandE_annotations/class_labels.csv
 """.split()
+
 
 @pytest.fixture
 def expected_tissues():

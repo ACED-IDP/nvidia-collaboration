@@ -7,6 +7,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 BLACKLIST = ['.DS_Store', 'HandE_annotations/HandE/tifs.tar.gz']
+WHITELIST = ['2020_Immune', 'HandE_annotations']
 
 class NVIDIAPathParser(PathParser):
     """A Class to extract Patient and Specimen from directory path.
@@ -29,10 +30,17 @@ class NVIDIAPathParser(PathParser):
 
 def parse_path(line: str) -> dict:
     """Parse directory listing."""
+    line
+    failed_whitelist = True
+    for _ in WHITELIST:
+        if _ in line:
+            failed_whitelist = False
+    if failed_whitelist:
+        raise ValueError(f"Do not include {line} (not in whitelist)")
 
     for _ in BLACKLIST:
         if _ in line:
-            raise ValueError(f"Do not include {_}")
+            raise ValueError(f"Do not include {line} (blacklisted {_})")
 
     path = pathlib.Path(line)
     stem = path.stem

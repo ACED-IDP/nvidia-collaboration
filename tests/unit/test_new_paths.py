@@ -26,7 +26,11 @@ def test_parse_paths_good(fixtures_path, expected_paths):
     expected_no_patient_count = 1
     actual_no_patient_count = 0
     for expected_path in expected_paths:
-        if expected_path in gen3_util_plugin_nvidia.BLACKLIST:
+        was_blacklisted = False
+        for _ in gen3_util_plugin_nvidia.BLACKLIST:
+            if _ in expected_path:
+                was_blacklisted = True
+        if was_blacklisted:
             continue
         _ = parse_path(expected_path)
         if not _['patient']:
@@ -48,8 +52,13 @@ def test_plugin_good(fixtures_path, expected_paths):
     actual_no_patient_count = 0
 
     for expected_path in expected_paths:
-        if expected_path in gen3_util_plugin_nvidia.BLACKLIST:
+        was_blacklisted = False
+        for _ in gen3_util_plugin_nvidia.BLACKLIST:
+            if _ in expected_path:
+                was_blacklisted = True
+        if was_blacklisted:
             continue
+
         expected_path = fixtures_path / expected_path
         patient_id = parser.extract_patient_identifier(str(expected_path))
         if not patient_id:
