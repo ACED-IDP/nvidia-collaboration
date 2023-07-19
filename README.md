@@ -17,9 +17,24 @@ python3 -m pip install -e .
 The input directory:
 
 ```
-tests/fixtures/
-└── P1
-    └── R1_A.B.C_T1_2023_01_01__RAND1_1_test.txt
+tests/fixtures-new/
+├── HandE
+├── RegisteredImages
+│   ├── 17633-6-Scene-001
+│   ├── 18538-6-Scene-001
+│   ├── 19142-6-Scene-001
+│   ├── 24952-6-Scene-001
+│   ├── 30411-6-Scene-001
+│   ├── 31022-6-Scene-001
+│   ├── 31480-6-Scene-001
+│   ├── 33548-6-Scene-001
+│   ├── 38592-6-Scene-001
+│   ├── 48411-6-Scene-001
+│   ├── 54774-4-Scene-001
+│   ├── 57494-6-Scene-001
+│   └── 57658-6-Scene-001
+└── annotations
+
 ```
 
 will produce:
@@ -30,21 +45,22 @@ summary:
   ResearchStudy:
     count: 1
   ResearchSubject:
-    count: 1
+    count: 13
   Patient:
-    count: 1
+    count: 13
   Specimen:
-    count: 1
+    count: 13
   DocumentReference:
-    count: 1
-    size: 4
+    count: 738
+    size: 74437
 msg: OK
+
 
 ```
 
 ### expected results
 
-Ouput files:
+Output files:
 
 ```
 tmp/output
