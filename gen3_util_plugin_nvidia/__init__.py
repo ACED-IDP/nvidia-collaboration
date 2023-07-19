@@ -6,6 +6,8 @@ from fhir.resources.identifier import Identifier
 import logging
 logger = logging.getLogger(__name__)
 
+BLACKLIST = ['.DS_Store', 'HandE_annotations/HandE/tifs.tar.gz']
+
 class NVIDIAPathParser(PathParser):
     """A Class to extract Patient and Specimen from directory path.
 
@@ -28,54 +30,51 @@ class NVIDIAPathParser(PathParser):
 def parse_path(line: str) -> dict:
     """Parse directory listing."""
 
-    if line == '':
-        return None
-    if line.startswith('/'):
-        line = line[1:]
+    for _ in BLACKLIST:
+        if _ in line:
+            raise ValueError(f"Do not include {_}")
 
-    if '/' not in line:
-        logger.debug(f"Start cell-line: {line}")
-        return None
-
-    try:
-        cell_line, file_name = line.split('/')
-    except ValueError:
-        logger.warning(f"Un-parsable: {line}")
-        return None
-
-    if not all([cell_line, file_name]):
-        logger.warning(f"Un-parsable: {line}")
-        return None
-
-    file_name = file_name.replace('__', '_')
-
-    try:
-        round_, markers, tissue, year, month, day, random_file_number, channel_id, u_ = file_name.split('_')
-        markers = markers.split('.')
-        date_of_imaging = f"{year}-{month}-{day}T00:00:00"
-
+    path = pathlib.Path(line)
+    stem = path.stem
+    if '__' in stem:
+        parts = stem.split('__')
+        assert len(parts) == 2, f"Expected 2 parts in {stem}"
+        identifiers = parts[-1].split('_')
+        assert len(parts) == 2, f"Expected 2 identifiers in {identifiers}"
+        cell_line = identifiers[-1]
+        tissue = identifiers[-1]
+        # print("parsed from file name", line)
         return {
-            'round': round_,
-            'markers': markers,
+            # 'round': round_,  <<< SKIP
+            # 'markers': markers,  <<< SKIP (for now)
             'tissue': tissue,
-            'date_of_imaging': date_of_imaging,
-            'random_file_number': random_file_number,
-            'channel_id': channel_id,
-            'file_name': file_name,
+            # 'date_of_imaging': date_of_imaging,   <<< SKIP
+            # 'random_file_number': random_file_number, <<< SKIP
+            # 'channel_id': channel_id,  <<< SKIP
+            'file_name': path.name,
             'patient': cell_line,
             'path': line
         }
 
-    except ValueError as e:
-        logger.debug(f"Could not parse: {line} {e}")
+    if 'RegisteredImages/' in line:
+        # print(line)
+        cell_line = path.name.split('-')[1].split('_')[-1]
+        tissue = cell_line
+        # print("parsed from RegisteredImages/ file name", line)
         return {
-            'round': None,
-            'markers': None,
-            'tissue': None,
-            'date_of_imaging': None,
-            'random_file_number': None,
-            'channel_id': None,
-            'file_name': file_name,
+            'tissue': tissue,
+            'file_name': path.name,
             'patient': cell_line,
             'path': line
         }
+
+    # print(f"Could not parse {line}")
+
+    return {
+            'tissue': None,
+            'file_name': path.name,
+            'patient': None,
+            'path': line
+        }
+
+
